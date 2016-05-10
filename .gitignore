@@ -26,6 +26,9 @@ build/Release
 # Dependency directory
 node_modules
 typings
+.idea/
+app/*.js
+app/*.map
 
 # Optional npm cache directory
 .npm
