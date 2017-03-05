@@ -5,6 +5,7 @@
     'app':                        'app', // 'dist',
     'rxjs':                       'node_modules/rxjs',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
+    'nlp_compromise':             'node_modules/nlp_compromise',
     '@angular':                   'node_modules/@angular'
   };
 
@@ -13,6 +14,7 @@
     'app':                        { main: 'main.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
+    'nlp_compromise':             { main: 'builds/nlp_compromise.js', defaultExtension: 'js' },
   };
 
   var packageNames = [

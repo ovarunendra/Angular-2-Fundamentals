@@ -6,6 +6,8 @@ import { HeroesComponent } from './heroes.component';
 import { DashboardComponent } from './dashboard.component';
 import { HeroDetailComponent } from './hero-detail.component';
 
+let nlp = require('nlp_compromise');
+
 @RouteConfig([
 	{
 	  path: '/dashboard',
@@ -27,7 +29,8 @@ import { HeroDetailComponent } from './hero-detail.component';
 @Component({
 	selector: 'my-app',
 	template: `
-		<h1>{{title}}</h1>
+		<h1 style="display: inline-block;">{{title}}</h1>
+		<button (click)="nlpTest()">NLP</button>
 		<nav>
 			<a [routerLink]="['Dashboard']">Dashboard</a>
 			<a [routerLink]="['Heroes']">Heroes</a>
@@ -40,4 +43,9 @@ import { HeroDetailComponent } from './hero-detail.component';
 })
 export class AppComponent {
 	title = 'Tour of Heroes';
+
+	nlpTest() {
+		console.log("Is Plural: "+nlp.noun(this.title).is_plural());
+		alert("Title: "+nlp.noun(this.title).pluralize());
+	}
 }
